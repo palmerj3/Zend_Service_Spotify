@@ -1,0 +1,22 @@
+Zend_Service_Spotify
+
+Author: Jason Palmer (http://www.jason-palmer.com)
+
+[description]
+
+Zend_Service_Spotify is an implementation of Zend_Service (http://framework.zend.com/manual/en/zend.service.html) that implements the Spotify Metadata API (http://developer.spotify.com/en/metadata-api/overview/).
+
+[usage]
+
+Basic Artist Search:
+
+$spotify_obj = new Zend_Service_Spotify();
+
+$result = $spotify_obj->searchByArtist('dave matthews');
+foreach($result->artist as $a) {
+	echo "Name: " . $a->name . "\n";
+	echo "Popularity: " . $a->popularity . "\n";
+	echo "ID: " . $a->id . "\n";
+}
+
+More to come...
